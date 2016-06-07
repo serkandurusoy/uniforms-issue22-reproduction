@@ -1,0 +1,7 @@
+meteor-base
+static-html
+standard-minifier-css
+standard-minifier-js
+es5-shim
+ecmascript
+aldeed:simple-schema
