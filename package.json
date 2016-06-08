@@ -10,7 +10,7 @@
     "react-addons-pure-render-mixin": "^15.1.0",
     "react-addons-update": "^15.1.0",
     "react-dom": "^15.1.0",
-    "uniforms": "^1.0.0-rc.13",
-    "uniforms-unstyled": "^1.0.0-rc.13"
+    "uniforms": "1.0.0-rc.12",
+    "uniforms-unstyled": "1.0.0-rc.12"
   }
 }

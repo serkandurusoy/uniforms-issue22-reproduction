@@ -5,22 +5,23 @@ import { AutoForm } from 'uniforms';
 import { TextField, SubmitField } from 'uniforms-unstyled';
 import CustomTextField from './custom-text';
 import CustomEmailField from './custom-email';
+import CustomDynamicField from './custom-dynamic';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
 const testSchema = new SimpleSchema({
   text: {
     type: String,
   },
-  email: {
-    type: String,
-  },
-  password: {
-    type: String,
-  },
   customText: {
     type: String,
   },
   customEmail: {
+    type: String,
+  },
+  customDynamicText: {
+    type: String,
+  },
+  customDynamicEmail: {
     type: String,
   },
 });
@@ -34,10 +35,10 @@ class TestForm extends Component {
     return (
       <AutoForm schema={ testSchema } onSubmit={ doc => this.handleSubmit(doc) }  >
         <TextField name="text" />
-        <TextField type="email" name="email" />
-        <TextField type="password" name="password" />
         <CustomTextField name="customText" />
         <CustomEmailField name="customEmail" />
+        <CustomDynamicField name="customDynamicText" />
+        <CustomDynamicField type="email" name="customDynamicEmail" />
         <SubmitField value="submit"/>
       </AutoForm>
     );
