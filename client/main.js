@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { AutoForm } from 'uniforms';
 import { TextField, SubmitField } from 'uniforms-unstyled';
-import CustomTextField from './custom';
+import CustomTextField from './custom-text';
+import CustomEmailField from './custom-email';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
 const testSchema = new SimpleSchema({
@@ -16,7 +17,10 @@ const testSchema = new SimpleSchema({
   password: {
     type: String,
   },
-  custom: {
+  customText: {
+    type: String,
+  },
+  customEmail: {
     type: String,
   },
 });
@@ -32,7 +36,8 @@ class TestForm extends Component {
         <TextField name="text" />
         <TextField type="email" name="email" />
         <TextField type="password" name="password" />
-        <CustomTextField name="custom" />
+        <CustomTextField name="customText" />
+        <CustomEmailField name="customEmail" />
         <SubmitField value="submit"/>
       </AutoForm>
     );
